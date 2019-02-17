@@ -1,0 +1,11 @@
+f = open('utf8编码.txt', 'r',encoding='UTF-8')
+a = f.read()
+print('utf8编码.txt:  ' + a)
+f = open('gbk编码.txt', 'r', encoding='gbk')
+b = f.read()
+print('gbk编码.txt:  ' + b)
+c = a + b
+print('合并内容： ' + c)
+fileName = input('请输入新文件的名称')
+f = open(fileName, 'w',encoding='UTF-8')
+f.write(c)
